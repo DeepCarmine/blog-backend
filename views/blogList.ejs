@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %></title>
+        <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <body>
+        <h1><%= title %></h1>
+        <a href="blogWrite"> write</a>
+        <br>
+            <% if (blogs !== null){
+                for (let blog of blogs) { %>
+                    <a href="/apis/blogs/<%= blog._id%>"><h3><%=blog.name%></h3></a>
+            <%  }} %>
+    </body>
+    </head>
+</html>

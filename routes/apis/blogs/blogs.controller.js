@@ -4,7 +4,7 @@ var ObjectId = require('mongoose').Types.ObjectId;
 exports.list = (req, res, next) => {
     Blog.find(function(err, blogs){
         if(err) return res.status(500).send({error: 'database failure'});
-        res.json(blogs);
+        res.render('blogList', { title: 'Title', blogs: blogs });
     });
 };
 
