@@ -48,4 +48,14 @@ db.once('open', function(){
 // mongoose.connect('mongodb://blogadmin:0512!@blog@localhost:27017/blogDB');
 mongoose.connect('mongodb://localhost/blogDB');
 
+// mongoose.Promise = global.Promise;
+// const mongodbConfig = config.database.mongo.master;
+// const mongodbUri = `mongodb://${encodeURIComponent(mongodbConfig.user)}:${encodeURIComponent(mongodbConfig.password)}@${mongodbConfig.host}/${mongodbConfig.database}`;
+// mongoose.connect(mongodbUri);
+// const db = mongoose.connection;
+// db.on('error', console.error);
+// db.once('open', ()=>{
+//     console.log('connected to mongodb server');
+// });
+
 module.exports = app;

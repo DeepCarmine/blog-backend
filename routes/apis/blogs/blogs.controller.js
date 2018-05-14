@@ -8,6 +8,23 @@ exports.list = (req, res, next) => {
     });
 };
 
+// exports.detail = (req, res, next) => {
+//     const chatID = req.params.chatID;
+  
+//     if( !chatID ) {
+//       throw new NotFoundException();
+//     }
+  
+//     Conversations.getChatDetail(chatID)
+//     .then((values) => {
+//       res.json({
+//         dialogs: values
+//       });
+//     }).catch( (err) => {
+//       next(err);
+//     });
+//   }
+
 exports.newBlog = (req, res, next) => {
     var blog = new Blog();
     blog.name = req.body.name;

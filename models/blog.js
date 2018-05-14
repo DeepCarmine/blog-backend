@@ -1,5 +1,5 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 // var commentSchema = new Schema({
 //     name: String,
@@ -19,8 +19,23 @@ var Schema = mongoose.Schema;
 //     comments: [commentSchema]
 // });
 
-var blogSchema = new Schema({
+const blogs = new Schema({
     name: String
 });
 
-module.exports = mongoose.model('blog', blogSchema);
+// blogs.statics.getChatDetail = function(chatID) {
+//     return this.find({
+//         chatID:  chatID
+//       },{
+//         "chatID": 1,
+//         "name": 1,
+//         "text": 1,
+//         "response.context": 1,
+//         "response.output": 1,
+//         "request.userInfo": 1,
+//         "request.input_answer": 1,
+//         "date": 1,
+//       }).sort({date: 1}).exec();
+//   }
+
+module.exports = mongoose.model('blog', blogs);
